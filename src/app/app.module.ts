@@ -18,6 +18,8 @@ import { DateValueAccessorModule } from 'angular-date-value-accessor';
 import localeCh from '@angular/common/locales/de-CH';
 import { registerLocaleData } from '@angular/common';
 import { IsbnPipe } from './shared/isbn.pipe';
+import { ZoomDirective } from './shared/zoom.directive';
+import { DelayDirective } from './shared/delay.directive';
 registerLocaleData(localeCh);
 
 
@@ -30,7 +32,9 @@ registerLocaleData(localeCh);
     HomeComponent,
     SearchComponent,
     BookFormComponent,
-    IsbnPipe
+    IsbnPipe,
+    ZoomDirective,
+    DelayDirective
   ],
   imports: [
     BrowserModule,
