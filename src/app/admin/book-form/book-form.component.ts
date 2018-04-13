@@ -1,12 +1,11 @@
 import { BookValidators } from './../shared/book.validators';
-import { BookFactory } from './../shared/book-factory';
-import { Thumbnail } from './../shared/thumbnail';
 import { BookFormErrorMessages } from './book-form-error-messages';
-import { Book } from './../shared/book';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
-import { BookStoreService } from '../shared/book-store.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BookFactory } from '../../shared/book-factory';
+import { BookStoreService } from '../../shared/book-store.service';
+import { Book } from '../../shared/book';
 
 @Component({
   selector: 'bm-book-form',
