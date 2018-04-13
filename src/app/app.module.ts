@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -14,6 +14,14 @@ import { SearchComponent } from './search/search.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import { DateValueAccessorModule } from 'angular-date-value-accessor';
 
+// Used to set the Locales: de-CH
+import localeCh from '@angular/common/locales/de-CH';
+import { registerLocaleData } from '@angular/common';
+import { IsbnPipe } from './shared/isbn.pipe';
+import { ZoomDirective } from './shared/zoom.directive';
+import { DelayDirective } from './shared/delay.directive';
+registerLocaleData(localeCh);
+
 
 @NgModule({
   declarations: [
@@ -23,7 +31,10 @@ import { DateValueAccessorModule } from 'angular-date-value-accessor';
     BookDetailsComponent,
     HomeComponent,
     SearchComponent,
-    BookFormComponent
+    BookFormComponent,
+    IsbnPipe,
+    ZoomDirective,
+    DelayDirective
   ],
   imports: [
     BrowserModule,
@@ -33,7 +44,8 @@ import { DateValueAccessorModule } from 'angular-date-value-accessor';
     DateValueAccessorModule
   ],
   providers: [
-    BookStoreService
+    BookStoreService,
+    { provide: LOCALE_ID, useValue: 'de-CH' }
   ],
   bootstrap: [AppComponent]
 })
