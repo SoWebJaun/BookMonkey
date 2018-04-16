@@ -11,8 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { BookStoreService } from './shared/book-store.service';
 import { AppRoutingModule } from './app-routing.module';
-import { BookModule } from './book/book.module';
-import { AdminModule } from './admin/admin.module';
+import { BookResolver } from './shared/book-resolver.service';
 
 @NgModule({
   declarations: [
@@ -23,13 +22,12 @@ import { AdminModule } from './admin/admin.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule,
-    BookModule,
-    AdminModule
+    HttpModule
   ],
   providers: [
     BookStoreService,
-    { provide: LOCALE_ID, useValue: 'de-CH' }
+    { provide: LOCALE_ID, useValue: 'de-CH' },
+    BookResolver
   ],
   bootstrap: [AppComponent]
 })

@@ -1,3 +1,4 @@
+import { BookResolver } from './../shared/book-resolver.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookDetailsComponent } from './book-details/book-details.component';
@@ -5,12 +6,15 @@ import { BookListComponent } from './book-list/book-list.component';
 
 const routes: Routes = [
   {
-    path: 'books',
+    path: '',
     component: BookListComponent
   },
   {
-    path: 'books/:isbn',
-    component: BookDetailsComponent
+    path: ':isbn',
+    component: BookDetailsComponent,
+    resolve: {
+      book: BookResolver
+    }
   }
 ];
 
