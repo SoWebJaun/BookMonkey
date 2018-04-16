@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE messagebundle [
+<!ELEMENT messagebundle (msg)*>
+<!ATTLIST messagebundle class CDATA #IMPLIED>
+
+<!ELEMENT msg (#PCDATA|ph|source)*>
+<!ATTLIST msg id CDATA #IMPLIED>
+<!ATTLIST msg seq CDATA #IMPLIED>
+<!ATTLIST msg name CDATA #IMPLIED>
+<!ATTLIST msg desc CDATA #IMPLIED>
+<!ATTLIST msg meaning CDATA #IMPLIED>
+<!ATTLIST msg obsolete (obsolete) #IMPLIED>
+<!ATTLIST msg xml:space (default|preserve) "default">
+<!ATTLIST msg is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<messagebundle>
+  <msg id="HomeComponent:header"><source>app/home/home.component.ts:4</source>Home</msg>
+  <msg id="HomeComponent:tagline" desc="a proud sentence about the project"><source>app/home/home.component.ts:5,7</source>
+          Das ist der BookMonkey
+        </msg>
+  <msg id="HomeComponent:book list link" desc="Text of the link to the books
+          screen"><source>app/home/home.component.ts:10,12</source>
+          Buchliste ansehen
+          </msg>
+  <msg id="SearchComponent:search placeholder"><source>app/search/search.component.ts:3</source>Suche...</msg>
+  <msg id="BookFormComponent:book form"><source>app/admin/book-form/book-form.component.ts:1</source>Buchformular</msg>
+  <msg id="BookFormComponent:book title"><source>app/admin/book-form/book-form.component.ts:8</source>Buchtitel</msg>
+  <msg id="BookFormComponent:book subtitle"><source>app/admin/book-form/book-form.component.ts:17</source>Untertitel</msg>
+  <msg id="BookFormComponent:book isbn"><source>app/admin/book-form/book-form.component.ts:23</source>ISBN-Nummer</msg>
+  <msg id="BookFormComponent:book published"><source>app/admin/book-form/book-form.component.ts:32</source>Erscheinungsdatum</msg>
+  <msg id="BookFormComponent:book authors"><source>app/admin/book-form/book-form.component.ts:43</source>Autoren</msg>
+  <msg id="BookFormComponent:author placeholder"><source>app/admin/book-form/book-form.component.ts:46</source>Autor <ph name="INTERPOLATION"><ex>{{i+1}}</ex></ph></msg>
+  <msg id="BookFormComponent:book description"><source>app/admin/book-form/book-form.component.ts:60</source>Beschreibung</msg>
+  <msg id="BookFormComponent:book thumbnails"><source>app/admin/book-form/book-form.component.ts:66</source>Bilder</msg>
+  <msg id="BookFormComponent:thumbnails placeholder:url"><source>app/admin/book-form/book-form.component.ts:72</source>http://bild<ph name="INTERPOLATION"><ex>{{i+1}}</ex></ph>_Url</msg>
+  <msg id="BookFormComponent:thumbnails placeholder:title"><source>app/admin/book-form/book-form.component.ts:76</source>Bild <ph name="INTERPOLATION"><ex>{{i+1}}</ex></ph> Titel</msg>
+  <msg id="BookFormComponent:save" desc="Text of the button to save
+  scrreen"><source>app/admin/book-form/book-form.component.ts:88,90</source>
+  Speichern
+  </msg>
+  <msg id="BookDetailsComponent:book authors"><source>app/book/book-details/book-details.component.ts:11</source>Autoren</msg>
+  <msg id="BookDetailsComponent:book isbn"><source>app/book/book-details/book-details.component.ts:17</source>ISBN</msg>
+  <msg id="BookDetailsComponent:book published"><source>app/book/book-details/book-details.component.ts:21</source>Erschienen</msg>
+  <msg id="BookDetailsComponent:book rating"><source>app/book/book-details/book-details.component.ts:25</source>Rating</msg>
+  <msg id="BookDetailsComponent:book description"><source>app/book/book-details/book-details.component.ts:33</source>Beschreibung</msg>
+  <msg id="BookDetailsComponent:edit" desc="Text of the link to edit the book
+  screen"><source>app/book/book-details/book-details.component.ts:47,49</source><source>app/book/book-details/book-details.component.ts:55,57</source>
+  Buch bearbeiten
+  </msg>
+  <msg id="BookListComponent:empty"><source>app/book/book-list/book-list.component.ts:8</source>Es wurden noch keine Bücher eingetragen.</msg>
+  <msg id="BookListComponent:loading"><source>app/book/book-list/book-list.component.ts:12</source>Daten werden geladen...</msg>
+</messagebundle>
