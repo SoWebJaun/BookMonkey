@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Http, Headers} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -11,10 +11,13 @@ import { BookFactory } from './book-factory';
 
 @Injectable()
 export class BookStoreService {
-  private api = 'https://book-monkey2-api.angular-buch.com';
+  // private api = 'https://book-monkey2-api.angular-buch.com';
   private headers: Headers = new Headers();
 
-  constructor(private http: Http) {
+  constructor(
+    @Inject('API_URL') private api: string,
+    private http: Http
+  ) {
     this.headers.append('Content-Type', 'application/json');
   }
 

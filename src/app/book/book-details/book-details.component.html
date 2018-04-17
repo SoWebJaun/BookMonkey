@@ -43,16 +43,10 @@
 
 <a class="ui tiny yellow labeled icon button" [routerLink]="['../../admin', book?.isbn]">
   <i class="write icon"></i>
-  <!--i18n: Text of the link to edit the book
-  screen@@BookDetailsComponent:edit-->
-  Buch bearbeiten
-  <!--/i18n-->
+  <ng-container i18n="@@BookDetailsComponent:edit">Buch bearbeiten</ng-container>
 </a>
 
 <button class="ui tiny red labled icon button" (click)="removeBook()">
   <i class="remove icon"></i>
-  <!--i18n: Text of the link to delete the book
-  screen@@BookDetailsComponent:edit-->
-  Buch löschen
-  <!--/i18n-->
+  <ng-container i18n="@@BookDetailsComponent:delete">Buch löschen</ng-container>
 </button>
